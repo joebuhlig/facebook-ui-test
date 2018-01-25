@@ -1,0 +1,373 @@
+body {
+    font-family: "Segoe UI";
+    font-size: 13px;
+}
+
+.navigation-container,.topic-list {
+    
+        font-family: "Segoe UI";
+    font-size: 12px;
+}
+
+
+.user-menu .notifications .read {
+    background-color: #fff;
+    color: #1d2129;
+display: block;
+padding: 6px 30px 5px 12px;
+    padding-right: 30px;
+position: relative;
+ border-bottom: 1px solid #dddfe2;
+
+}
+
+.user-menu .notifications li {
+    padding:30px;
+
+}
+
+.user-menu .notifications li:hover  {
+    background: #E5EAF2;
+
+}
+
+
+.user-menu .notifications li a {
+    padding:0;
+    color: #1d2129;
+    font-weight:300;
+}
+
+.user-menu .menu-links-row li a:hover  {
+    background: #E5EAF2;
+
+}
+
+.user-menu .menu-links li:hover  {
+    background-color: #E5EAF2;
+
+}
+
+.menu-panel .notifications li a span{
+    font-weight:700;
+}
+
+.user-menu .notifications .fa {
+    font-size: 20px;
+}
+
+@import "theme_variables";
+
+.topic-post {
+    margin-bottom: 25px;
+    max-width: 777px;
+    border: 1px solid #dddfe2;
+    background-color: #ffffff;
+    border-radius: 3px;
+    padding: 10px;
+    
+    article {
+        border: none;
+    }
+}
+.topic-avatar {
+    border: none;
+    padding-left: 10px;
+}
+.topic-body {
+    border: none;
+    padding-right: 10px;
+}
+html, body, #main {
+    background-color: #e9ebee;
+}
+.list-container{
+    background-color: #ffffff;
+    border-radius: 3px;
+    padding: 10px;
+}
+.topic-list{
+    // background-color: #ffffff;
+    // border-radius: 3px;
+    // padding: 10px;
+}
+#suggested-topics .topic-list {
+    border: 1px solid #dddfe2;
+}
+
+.timeline-container .topic-timeline .timeline-scrollarea {
+    border-color: #6994ce;
+}
+
+.timeline-container .topic-timeline .timeline-handle {
+
+    background-color: #6994ce;
+
+}
+
+.names {
+    font-size: 16px;
+    margin-top: -45px;
+    margin-left: 60px;
+    color: #365899;
+}
+
+.names span a {
+    color: #365899;
+}
+
+.topic-post {
+
+    background-color: #F6F7F9;
+    margin-bottom: 0px;
+
+}
+
+.topic-owner {
+
+    background-color: #ffffff;
+
+}
+
+.topic-body .regular {
+    margin-top: 0px;
+}
+
+.post-menu-area {
+    margin-bottom: 3px;
+    margin-top: 3px;
+}
+
+.topic-map {
+    display: none;
+
+}
+
+nav.post-controls button {
+    font-size: 14px;
+    padding: 8px 10px;
+    font-weight: bold;
+
+}
+
+nav.post-controls .actions {
+
+    float: right;
+    border-top: 1px solid #e1e2e3;
+    width:100%;
+
+}
+
+// XXXXXXXXXXXXX
+
+.desktop-view{
+  .wrap {
+    max-width: 1250px;
+  }
+  .list-controls {
+    float: left;
+    padding: 0px 10px;
+    width: 12%;
+    
+    ol.category-breadcrumb{ 
+        margin: 0 10px 10px 0;
+        
+        .tag-drop {
+            margin-top: 10px;
+        }
+    }
+    .nav {
+        float:none;
+    }
+    .nav-pills>li, .btn {
+        display: block;
+        width: 100%;
+    }
+  }
+  .list-container {
+    background-color: transparent;
+    border-radius: 0px;
+    float: left;
+
+  }
+  .post-stream{
+      // float: left;
+      max-width: 700px;
+      
+      .topic-body {
+          max-width: 660px;
+      }
+
+    table { 
+        border-spacing: 10px;
+        border-collapse: separate;
+    }    
+      
+  }
+}
+
+.topic-list{
+  border-collapse: initial;
+  border-spacing: 0px 15px;
+
+  .category, .posters, .posts, .views, .activity{
+    display: none;
+  }
+
+  thead{
+    display: none;
+  }
+
+  .topic-list-item{
+    .main-link {
+      background-color: #ffffff;
+      border-radius: 3px;
+      margin-top: 20px;
+      padding: 0px;
+
+      &:before, &:after{
+        display: none;
+      }
+    }
+  }
+  .topic-excerpt{
+    margin: 0px;
+  }
+}
+.main-link .facebook-topic-wrapper{
+  max-width: 600px;
+  margin: 0px auto;
+
+  .topic-op-avatar{
+    display: inline-block;
+
+    img{
+      height: 45px;
+      width: 45px;
+    }
+  }
+  
+  .topic-details{
+    padding: 20px;
+  }
+  .topic-title-wrapper{
+    display: inline-block;
+    margin-left: 20px;
+    vertical-align: middle;
+
+    .topic-title{
+      font-size: 20px;
+    }
+  }
+
+  .topic-category{
+    float: right;
+    position: relative;
+    bottom: 20px;
+  }
+
+  .posters, .posts{
+    display: initial;
+  }
+
+  .topic-excerpt-wrapper {
+    border-top: 1px solid #F6F7F9;
+    padding: 20px;
+  }
+
+  .topic-poster-details{
+    border-top: 1px solid #F6F7F9;
+    height: 25px;
+    padding: 10px 0px;
+    margin: 0px 20px;
+
+    .posters, .likes {
+      float: left;
+    }
+    .likes {
+      margin-left: 20px;
+      margin-top: 5px;
+    }
+    .posts {
+      float: right;
+    }
+  }
+
+  .topic-actions{
+    float: none;
+    border-top: 1px solid #F6F7F9;
+    padding: 10px 20px;
+  }
+
+  .topic-view-comments {
+    border-top: 1px solid #F6F7F9;
+    padding: 15px 20px;
+  }
+
+  .topic-write-comment {
+    background-color: #F6F7F9;
+    padding: 25px 20px;  
+
+    .topic-op-avatar{
+      img{
+        height: 35px;
+        width: 35px;
+      }
+    }
+
+    .write-comment-link {
+      background-color: #ffffff;
+      border: 1px solid #e9ebee;
+      border-radius: 15px;
+      display: inline-block;
+      width: calc(100% - 58px);
+      margin-left: 10px;
+
+      a {
+        color: #e9ebee;
+        display: block;
+        margin-left: 5px;
+        padding: 5px;
+        width: 100%;
+      }
+    }
+  }
+}
+.category-breadcrumb{
+  .has-drop {
+    display: none;
+  }
+}
+
+.bread-crumbs-right-outlet.user-avatar-in-menu{
+  float: left;
+  width:100%;
+  margin-top: 25px;
+
+  .user-image, .user-detail{
+    display: inline-block;
+  }
+
+  .user-detail a {
+    font-size: 14px;
+    margin-left: 5px;
+  }
+}
+
+.discovery-below-outlet.top-user-list{
+  float:right;
+  margin-top: 25px;
+
+  .directory {
+    .user-info {
+      width: 200px;
+    }
+    .directory-item {
+      border-bottom: 1px solid #919191;
+    }
+    .directory-likes {
+      font-size: 18px;
+      vertical-align: middle;
+    }
+  }
+}

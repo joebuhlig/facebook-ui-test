@@ -1,0 +1,48 @@
+{{#if bulkSelectEnabled}}
+  <td class='star'>
+    <input type="checkbox" class="bulk-select">
+  </td>
+{{/if}}
+
+<td class='main-link clearfix' colspan="{{titleColSpan}}">
+  <div class="facebook-topic-wrapper">
+    <div class="topic-details">
+      <div class="topic-header">
+        {{raw "list/topic-list-op" topic=topic imageSize="medium"}}
+        <div class="topic-title-wrapper">
+          {{raw "list/topic-list-title" topic=topic showTopicPostBadges=showTopicPostBadges}}
+          {{raw "list/topic-list-metadata" topic=topic}}
+        </div>
+        {{raw "list/topic-category" category=topic.category}}
+
+        {{#if topic.tags}}
+          <div class='discourse-tags'>
+          {{#each topic.visibleListTags as |tag|}}
+            {{discourse-tag tag}}
+          {{/each}}
+          </div>
+        {{/if}}
+
+        {{raw-plugin-outlet name="topic-list-tags"}}
+      </div>
+    </div>
+    <div class="topic-excerpt-wrapper">
+      {{raw "list/topic-excerpt" topic=topic}}
+    </div>
+    <div class="topic-poster-details">
+      {{raw "list/facebook-posters" posters=topic.posters}}
+      {{raw "list/facebook-like-count" topic=topic}}
+      {{raw "list/facebook-post-count" topic=topic}}
+    </div>
+    {{#if showActions}}
+      {{raw "list/facebook-topic-actions" topicActions=topicActions}}
+    {{/if}}
+    <div class="topic-view-comments">
+      {{raw "list/facebook-view-comments" topic=topic}}
+    </div>
+    <div class="topic-write-comment">
+      {{raw "list/facebook-write-comment" topic=topic}}
+    </div>
+
+  </div>
+</td>

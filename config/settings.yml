@@ -1,0 +1,4 @@
+plugins:
+  facebook_ui_enabled:
+    default: false
+    client: true
