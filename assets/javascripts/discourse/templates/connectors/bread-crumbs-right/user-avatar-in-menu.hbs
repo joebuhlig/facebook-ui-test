@@ -1,6 +1,8 @@
+{{#if currentUser }}
 <div class="user-image">
   <a href="/u/{{currentUser.username}}" data-user-card="{{unbound currentUser.username}}">{{avatar currentUser imageSize="medium"}}</a>
 </div>
+{{/if}}
 
 <div class="user-detail">
   <div class='name-line'>

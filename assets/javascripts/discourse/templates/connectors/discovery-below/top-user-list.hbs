@@ -1,8 +1,6 @@
 <div id="adleaks-top-users">
   <h3>Top Contributors</h3>
   <div class="directory">
-    {{log this}}
-    {{log topUsers}}
     {{#each topUsers as |item|}}
       <div class="directory-item">
         <td class="directory-user">{{user-info user=item.user}}</td>
