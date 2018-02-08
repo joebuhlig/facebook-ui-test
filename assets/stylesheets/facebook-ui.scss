@@ -371,7 +371,46 @@ nav.post-controls .actions {
     }
   }
 }
+.topic-post:not(:first-child){
+  background-color: #F6F7F9;
+  border-bottom: 0px;
+  border-top: 0px;
+  border-radius: 0px;
 
+  // .topic-avatar {
+  //   float: none;
+  // }
+
+  // .topic-body {
+  //   float: none;
+  //   position: absolute;
+  // }
+
+  // .topic-meta-data {
+  //   width: 100%;
+  //   display: inline-block;
+
+  //   .post-info {
+  //     position: absolute;
+  //     right: 0px;
+  //     top: -40px;
+  //   }
+  // }
+
+  .contents {
+  //   max-width: 75%;
+  //   width: 100%;
+  //   display: inline-block;
+  //   position: relative;
+  //   top: -70px;
+  //   left: 25%;
+
+    nav.post-controls .actions {
+      border-bottom: 1px solid #e1e2e3;
+      border-top: 0px;
+    }
+  }
+}
 .topic-excerpt img {
     max-width: 100%;
     height: auto;
