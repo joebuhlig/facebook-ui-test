@@ -3,6 +3,9 @@ body {
     font-size: 13px;
 }
 
+.fa-heart:before {
+  content: "\f164";
+}
 .navigation-container,.topic-list {
     
         font-family: "Segoe UI";
@@ -354,7 +357,7 @@ nav.post-controls .actions {
   }
 }
 
-.discovery-below-outlet.top-user-list{
+.discovery-below-outlet.top-user-list, .topic-above-posts-outlet.top-user-list{
   float:right;
   margin-top: 25px;
 
