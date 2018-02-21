@@ -75,11 +75,11 @@ position: relative;
 }
 .topic-avatar {
     border: none;
-    padding-left: 10px;
+    // padding-left: 10px;
 }
 .topic-body {
     border: none;
-    padding-right: 10px;
+    // padding-right: 10px;
 }
 html, body, #main {
     background-color: #e9ebee;
@@ -89,13 +89,26 @@ html, body, #main {
     border-radius: 3px;
     padding: 10px;
 }
+.mobile-view .list-container{
+  background: transparent;
+}
 .topic-list{
     // background-color: #ffffff;
     // border-radius: 3px;
     // padding: 10px;
 }
 #suggested-topics .topic-list {
-    border: 1px solid #dddfe2;
+    border: 0px;
+
+    .topic-list-item .main-link{
+      background-color: transparent;
+    }
+    .facebook-topic-wrapper{
+      background-color: #ffffff;
+    }
+}
+#suggested-topics>h3{
+  text-align: center;
 }
 
 .timeline-container .topic-timeline .timeline-scrollarea {
@@ -110,8 +123,8 @@ html, body, #main {
 
 .names {
     font-size: 16px;
-    margin-top: -45px;
-    margin-left: 60px;
+    // margin-top: -45px;
+    // margin-left: 60px;
     color: #365899;
 }
 
@@ -138,7 +151,7 @@ html, body, #main {
 }
 
 .topic-body .regular {
-    margin-top: 0px;
+    // margin-top: 0px;
 }
 
 .post-menu-area {
@@ -147,7 +160,7 @@ html, body, #main {
 }
 
 .topic-map {
-    display: none;
+    // display: none;
 
 }
 
@@ -161,7 +174,8 @@ nav.post-controls button {
 nav.post-controls .actions {
 
     float: right;
-    border-top: 1px solid #e1e2e3;
+    // border-top: 1px solid #e1e2e3;
+    border: 0px;
     width:100%;
 
 }
@@ -200,10 +214,10 @@ nav.post-controls .actions {
   }
   .post-stream{
       // float: left;
-      max-width: 700px;
+      // max-width: 700px;
       
       .topic-body {
-          max-width: 660px;
+          // max-width: 660px;
       }
 
     table { 
@@ -341,6 +355,7 @@ nav.post-controls .actions {
     }
   }
 }
+
 .category-breadcrumb{
   .has-drop, .no-drop, .category-drop {
     display: none;
@@ -381,7 +396,7 @@ nav.post-controls .actions {
 }
 .topic-post:not(:first-child){
   background-color: #F6F7F9;
-  border-bottom: 0px;
+  // border-bottom: 0px;
   border-top: 0px;
   border-radius: 0px;
 
@@ -390,7 +405,7 @@ nav.post-controls .actions {
   // }
 
   .topic-body {
-    padding: 0px 11px;
+    // padding: 0px 11px;
   }
 
   // .topic-meta-data {
@@ -413,7 +428,7 @@ nav.post-controls .actions {
   //   left: 25%;
 
     nav.post-controls .actions {
-      border-bottom: 1px solid #e1e2e3;
+      // border-bottom: 1px solid #e1e2e3;
       border-top: 0px;
     }
   }
