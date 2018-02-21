@@ -4,7 +4,8 @@ import { default as computed, on, observes } from 'ember-addons/ember-computed-d
 import TopicModel from 'discourse/models/topic';
 import TopicController from 'discourse/controllers/topic';
 import Composer from 'discourse/models/composer';
-import UserStream from 'discourse/models/user-stream'
+import UserStream from 'discourse/models/user-stream';
+import Category from 'discourse/models/category';
 import { emojiUnescape } from 'discourse/lib/text';
 
 export default {
@@ -14,6 +15,24 @@ export default {
     if (!Discourse.SiteSettings.topic_list_previews_enabled) return;
 
     withPluginApi('0.8.12', (api) => {
+      Discourse.ExternalNavItem = Discourse.NavItem.extend({
+        href : function() {
+          return this.get('href');
+        }.property('href'),
+      });
+
+      Discourse.NavItem.reopenClass({
+        buildList : function(category, args) {
+          var categories = Category.list();
+          var list = this._super(category, args);
+          categories.forEach(function(category){
+            I18n.translations.en.js.filters[category.name] = { title: category.name, help: "" };
+            list.push(Discourse.NavItem.create({href: '/c/' + category.slug, name: category.name}));
+          })
+          return list;
+        }
+      });
+
       api.modifyClass('component:topic-list-item', {
 
         @on('didInsertElement')
@@ -85,5 +104,20 @@ export default {
         }
       })
     })
+
+    // withPluginApi('0.8', api => {
+    //   api.decorateWidget('post-avatar:after', dec => {
+    //     const attrs = dec.attrs;
+    //     return dec.h('div.fb-ui-meta', [
+    //               dec.attach('post-meta-data', attrs),
+    //               dec.attach('a', {
+    //                 title: 'post.collapse',
+    //                 icon: 'chevron-up',
+    //                 action: 'replyToPost'
+    //               })
+    //             ]
+    //           );
+    //   });
+    // });
   }
 }
