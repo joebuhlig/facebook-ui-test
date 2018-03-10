@@ -186,10 +186,10 @@ nav.post-controls .actions {
   .wrap {
     max-width: 1250px;
   }
-  .list-controls {
-    float: left;
+  .list-controls, .topic-navigation {
     padding: 0px 10px;
     width: 12%;
+    position: fixed;
     
     ol.category-breadcrumb{ 
         margin: 0 10px 10px 0;
@@ -209,7 +209,8 @@ nav.post-controls .actions {
   .list-container {
     background-color: transparent;
     border-radius: 0px;
-    float: left;
+    max-width: 600px;
+    margin-left: 15%;
 
   }
   .post-stream{
@@ -362,7 +363,7 @@ nav.post-controls .actions {
   }
 }
 
-.bread-crumbs-right-outlet.user-avatar-in-menu{
+.bread-crumbs-right-outlet.user-avatar-in-menu, .topic-navigation.user-avatar-in-menu{
   float: left;
   width:100%;
   margin-top: 25px;
@@ -376,10 +377,16 @@ nav.post-controls .actions {
     margin-left: 5px;
   }
 }
+.timeline-container {
+  display: none;
+}
+.desktop-view #topic-footer-buttons, .desktop-view .posts-wrapper, .desktop-view #topic-title  {
+  margin-left:15%;
+}
 
 .discovery-below-outlet.top-user-list, .topic-above-posts-outlet.top-user-list{
-  float:right;
-  margin-top: 25px;
+  position: fixed;
+  right: 20px;
 
   .directory {
     .user-info {
