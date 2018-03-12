@@ -95,7 +95,7 @@ export default {
         }
       })
 
-      api.registerConnectorClass('topic-above-posts', 'top-user-list', {
+      api.registerConnectorClass('topic-above-post-stream', 'top-user-list', {
         setupComponent(args, component) {
           const users = api.container.lookup('service:store').find("directoryItem", {"period": "weekly", "order": "likes_received"});
           users.then(function(result){

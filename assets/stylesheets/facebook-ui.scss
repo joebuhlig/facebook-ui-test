@@ -105,10 +105,13 @@ html, body, #main {
     }
     .facebook-topic-wrapper{
       background-color: #ffffff;
+      margin: 0px auto 0px 18%;
     }
 }
 #suggested-topics>h3{
   text-align: center;
+  max-width: 600px;
+  margin: 0px auto 0px 18%;
 }
 
 .timeline-container .topic-timeline .timeline-scrollarea {
@@ -210,15 +213,17 @@ nav.post-controls .actions {
     background-color: transparent;
     border-radius: 0px;
     max-width: 600px;
-    margin-left: 15%;
+    margin-left: 13%;
+    float: none;
+    position: absolute;
 
   }
   .post-stream{
       // float: left;
-      // max-width: 700px;
+      max-width: 660px;
       
       .topic-body {
-          // max-width: 660px;
+          max-width: 620px;
       }
 
     table { 
@@ -384,9 +389,10 @@ nav.post-controls .actions {
   margin-left:15%;
 }
 
-.discovery-below-outlet.top-user-list, .topic-above-posts-outlet.top-user-list{
+.discovery-below-outlet.top-user-list, .topic-above-post-stream-outlet.top-user-list{
   position: fixed;
   right: 20px;
+  max-width: 250px;
 
   .directory {
     .user-info {
