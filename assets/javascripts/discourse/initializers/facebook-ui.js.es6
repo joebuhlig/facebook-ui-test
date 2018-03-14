@@ -40,7 +40,19 @@ export default {
           api.container.lookup('controller:topic').set('openComposer', false);
           $('.write-comment-link').unbind().click(function(){
             api.container.lookup('controller:topic').set('openComposer', true);
-          })
+          });
+          const iframes = $('.lazyYT');
+          if (iframes.length === 0) { return; }
+
+          $('.lazyYT').lazyYT({
+            onPlay(e, $el) {
+              // don't cloak posts that have playing videos in them
+              const postId = parseInt($el.closest('article').data('post-id'));
+              if (postId) {
+                api.preventCloak(postId);
+              }
+            }
+          });
         },
 
         @on('init')
