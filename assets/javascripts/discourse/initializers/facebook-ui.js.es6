@@ -100,7 +100,7 @@ export default {
 
       api.registerConnectorClass('discovery-below', 'top-user-list', {
         setupComponent(args, component) {
-          const users = api.container.lookup('service:store').find("directoryItem", {"period": "weekly", "order": "likes_received"});
+          const users = api.container.lookup('service:store').find("directoryItem", {"period": "all", "order": "likes_received"});
           users.then(function(result){
             component.set('topUsers', result.content);
           })
@@ -109,7 +109,7 @@ export default {
 
       api.registerConnectorClass('topic-above-post-stream', 'top-user-list', {
         setupComponent(args, component) {
-          const users = api.container.lookup('service:store').find("directoryItem", {"period": "weekly", "order": "likes_received"});
+          const users = api.container.lookup('service:store').find("directoryItem", {"period": "all", "order": "likes_received"});
           users.then(function(result){
             component.set('topUsers', result.content);
           })
